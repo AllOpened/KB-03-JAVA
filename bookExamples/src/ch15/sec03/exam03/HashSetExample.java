@@ -1,0 +1,29 @@
+package ch15.sec03.exam03;
+import java.util.*;
+
+public class HashSetExample {
+    public static void main(String[] args) {
+        Set<String> set = new HashSet<String>();
+
+        //객체  추가
+        set.add("Java");
+        set.add("JDBC");
+        set.add("JSP");
+        set.add("Spring");
+
+        //객체를  하나씩  가져와서  출력
+        Iterator<String> iterator = set.iterator();
+        while (iterator.hasNext()) {
+            //객체를  하나 가져오기
+            String element = iterator.next();
+            System.out.println(element);
+        }
+
+        System.out.println();
+
+        //향상된 for문으로 객체를  하나씩  가져와서  출력
+        for (String element : set) {
+            System.out.println(element);
+        }
+    }
+}
